@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 export default function Hero() {
+  const basePath = process.env.NODE_ENV === "production" ? "/portfolio" : "";
   return (
     <>
       <section
@@ -11,7 +12,7 @@ export default function Hero() {
           {/* LinkedIn */}
           <Link href="https://linkedin.com/in/yourprofile" target="_blank">
             <Image
-              src={"/icons/linkedin.svg"}
+              src={`${basePath}/icons/linkedin.svg`}
               alt={""}
               width={24}
               height={24}
@@ -20,7 +21,12 @@ export default function Hero() {
 
           {/* GitHub */}
           <Link href="https://github.com/yourusername" target="_blank">
-            <Image src={"/icons/git2.svg"} alt={""} width={24} height={24} />
+            <Image
+              src={`${basePath}/icons/git2.svg`}
+              alt={""}
+              width={24}
+              height={24}
+            />
           </Link>
         </div>
 
@@ -67,7 +73,7 @@ export default function Hero() {
                 <div className="relative w-full h-full bg-gray-700 rounded-full border-4 border-gray-700 overflow-hidden shadow-[0_0_30px_rgba(6,182,212,0.3)] flex items-center justify-center">
                   <span className="text-gray-500">
                     <Image
-                      src="/icons/kris.jpeg"
+                      src={`${basePath}/icons/kris.jpeg`}
                       alt="Krishtina Maharjan"
                       fill
                       className="object-cover"
