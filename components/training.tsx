@@ -26,7 +26,7 @@ export default function Training() {
                   <div className="absolute -top-10 -right-20 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl group-hover:bg-cyan-500/20 transition-all duration-500 z-0"></div>
 
                   <div className="relative z-10">
-                     <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 [text-shadow:0_0_5px_rgba(255,255,255,0.2)]">
+                    <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 [text-shadow:0_0_5px_rgba(255,255,255,0.2)]">
                       {item.name}
                     </h3>
                     <div className="flex flex-wrap items-center text-white mb-2">
@@ -36,8 +36,6 @@ export default function Training() {
                     <div className="flex flex-wrap items-center text-white mb-2">
                       <p>Duration: {item.duration}</p>
                     </div>
-
-                   
 
                     {/* Description Paragraphs */}
                     <div className="space-y-3 ">
@@ -59,20 +57,12 @@ export default function Training() {
                   {/* Visual Placeholder */}
                   <span className="text-gray-500 font-medium text-sm z-10 flex flex-col items-center gap-2">
                     <Image
-                  src={item.image} 
-                  alt={`${item.name} Certificate`}
-                  fill
-                  className="object-contain object-top opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
-                /> 
+                      src={item.image}
+                      alt={`${item.name} Certificate`}
+                      fill
+                      className="object-contain object-top opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                    />
                   </span>
-
-                  {/* <Image
-                  src={`/certificates/${item.id}.jpg`} 
-                  alt={`${item.name} Certificate`}
-                  fill
-                  className="object-cover object-top opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
-                /> 
-                */}
                 </div>
               </div>
             ))}
