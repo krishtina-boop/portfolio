@@ -3,6 +3,8 @@ import Image from "next/image";
 import { ScrollReveal } from "./scroll";
 
 export default function Skills() {
+  const basePath = process.env.NODE_ENV === "production" ? "/portfolio" : "";
+
   return (
     <>
       <ScrollReveal>
@@ -29,7 +31,7 @@ export default function Skills() {
                   <div className="relative w-16 h-16 ">
                     <div className="w-12 h-12 flex items-center justify-center text-xs text-gray-400 group-hover:border-cyan-400">
                       <Image
-                        src={skill.icon}
+                        src={`${basePath}${skill.icon}`}
                         alt={`${skill.name} icon`}
                         fill
                         className="object-contain"
