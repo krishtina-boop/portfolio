@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
-  basePath: "/your-repo-name", // ← replace with your actual repo name
-  assetPrefix: "/your-repo-name/", // ← replace with your actual repo name
+  basePath: process.env.NODE_ENV === "production" ? "/portfolio" : "",
+  assetPrefix: process.env.NODE_ENV === "production" ? "/portfolio/" : "",
   images: {
     unoptimized: true,
   },
