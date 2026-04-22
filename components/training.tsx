@@ -1,4 +1,5 @@
 import { training } from "@/data/training";
+import Image from "next/image";
 export default function Training() {
   return (
     <>
@@ -25,6 +26,9 @@ export default function Training() {
                   <div className="absolute -top-10 -right-20 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl group-hover:bg-cyan-500/20 transition-all duration-500 z-0"></div>
 
                   <div className="relative z-10">
+                     <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 [text-shadow:0_0_5px_rgba(255,255,255,0.2)]">
+                      {item.name}
+                    </h3>
                     <div className="flex flex-wrap items-center text-white mb-2">
                       <p>Provider: {item.company}</p>
                     </div>
@@ -33,9 +37,7 @@ export default function Training() {
                       <p>Duration: {item.duration}</p>
                     </div>
 
-                    <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 [text-shadow:0_0_5px_rgba(255,255,255,0.2)]">
-                      {item.name}
-                    </h3>
+                   
 
                     {/* Description Paragraphs */}
                     <div className="space-y-3 ">
@@ -53,10 +55,15 @@ export default function Training() {
 
                 {/* --- BOTTOM PART: IMAGE --- */}
                 {/* mt-auto pushes this container to the very bottom of the card */}
-                <div className="relative w-full h-48 sm:h-56 bg-gray-900/80 border-t border-gray-700/50 overflow-hidden flex items-center justify-center mt-auto group-hover:bg-gray-900/60 transition-colors duration-300">
+                <div className="relative w-full h-60 sm:h-56 bg-gray-900/80 border-t border-gray-700/50 overflow-hidden flex items-center justify-center mt-auto group-hover:bg-gray-900/60 transition-colors duration-300">
                   {/* Visual Placeholder */}
                   <span className="text-gray-500 font-medium text-sm z-10 flex flex-col items-center gap-2">
-                    Certificate Image
+                    <Image
+                  src={item.image} 
+                  alt={`${item.name} Certificate`}
+                  fill
+                  className="object-contain object-top opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                /> 
                   </span>
 
                   {/* <Image

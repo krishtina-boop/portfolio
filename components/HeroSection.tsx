@@ -46,14 +46,14 @@ export default function Hero() {
 
               <div className="flex gap-4 justify-center md:justify-start">
                 <Link
-                  href="/project"
-                  className="px-6 py-3 bg-blue-500 hover:bg-blue-400 text-white rounded-lg font-bold transition-all shadow-[0_0_15px_rgba(6,182,212,0.5)] hover:shadow-[0_0_25px_rgba(6,182,212,0.8)]"
+                  href="#project"
+                  className="p-3 bg-blue-500 hover:bg-blue-400 text-white rounded-2xl font-bold transition-all shadow-[0_0_15px_rgba(6,182,212,0.5)] hover:shadow-[0_0_25px_rgba(6,182,212,0.8)]"
                 >
                   View My Work
                 </Link>
                 <Link
-                  href="/contact"
-                  className="px-6 py-3 border border-gray-400 hover:border-cyan-400 text-gray-200 hover:text-cyan-400 rounded-lg font-medium transition-all"
+                  href="#contact"
+                  className="p-3 border border-gray-400 hover:border-cyan-400 text-gray-200 hover:text-cyan-400 rounded-2xl font-medium transition-all"
                 >
                   Contact Me
                 </Link>
@@ -61,7 +61,7 @@ export default function Hero() {
             </div>
 
             <div className="flex justify-center order-1 md:order-2">
-              <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96">
+              <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 animate-float-x">
                 <div className="absolute inset-0 bg-cyan-400/20 rounded-full blur-3xl mix-blend-screen"></div>
 
                 <div className="relative w-full h-full bg-gray-700 rounded-full border-4 border-gray-700 overflow-hidden shadow-[0_0_30px_rgba(6,182,212,0.3)] flex items-center justify-center">

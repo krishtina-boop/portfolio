@@ -8,11 +8,12 @@ const Navbar = () => {
 
   const navLinks = [
     { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
-    { name: "Skills", path: "/skills" },
-    { name: "Training", path: "/training" },
-    { name: "Project", path: "/project" },
-    { name: "Contact", path: "/contact" },
+    { name: "About", path: "#about" },
+    { name: "Skills", path: "#skills" },
+    { name: "Experience", path: "#experience" },
+    { name: "Training", path: "#training" },
+    { name: "Project", path: "#project" },
+    { name: "Contact", path: "#contact" },
   ];
 
   const toggleMenu = () => {
@@ -24,10 +25,10 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo Section */}
-          <div className="flex-shrink-0">
+          <div className="shrink-0">
             <Link
               href="/"
-              className="text-xl font-bold text-blue-200 text-lg [text-shadow:0_0_10px_rgba(255,255,255,0.7)]"
+              className="text-xl font-bold text-blue-200 [text-shadow:0_0_10px_rgba(255,255,255,0.7)]"
             >
               MyPortfolio
             </Link>
@@ -44,6 +45,14 @@ const Navbar = () => {
                   {link.name}
                 </Link>
               ))}
+
+              <a
+                href="/icons/resume.pdf"
+                download="YourName_Resume.pdf"
+                className="bg-blue-400 text-white p-3 rounded-2xl"
+              >
+                Download Resume
+              </a>
             </div>
           </div>
 
@@ -88,7 +97,6 @@ const Navbar = () => {
         </div>
       </div>
 
-
       {isOpen && (
         // Added a slight dark transparent background so mobile text is readable
         <div className="md:hidden bg-black/40 backdrop-blur-md">
@@ -103,6 +111,13 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
+            <a
+              href="/icons/resume.pdf"
+              download="YourName_Resume.pdf"
+              className="bg-blue-400 text-white p-3 rounded-2xl mt-2"
+            >
+              Download Resume
+            </a>
           </div>
         </div>
       )}
