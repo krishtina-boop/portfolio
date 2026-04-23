@@ -1,6 +1,8 @@
 import { training } from "@/data/training";
 import Image from "next/image";
 export default function Training() {
+  const basePath = process.env.NODE_ENV === "production" ? "/portfolio" : "";
+
   return (
     <>
       <section id="training" className="py-20 relative z-10">
@@ -51,13 +53,10 @@ export default function Training() {
                   </div>
                 </div>
 
-                {/* --- BOTTOM PART: IMAGE --- */}
-                {/* mt-auto pushes this container to the very bottom of the card */}
                 <div className="relative w-full h-60 sm:h-56 bg-gray-900/80 border-t border-gray-700/50 overflow-hidden flex items-center justify-center mt-auto group-hover:bg-gray-900/60 transition-colors duration-300">
-                  {/* Visual Placeholder */}
                   <span className="text-gray-500 font-medium text-sm z-10 flex flex-col items-center gap-2">
                     <Image
-                      src={item.image}
+                      src={`${basePath}${item.image}`}
                       alt={`${item.name} Certificate`}
                       fill
                       className="object-contain object-top opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"

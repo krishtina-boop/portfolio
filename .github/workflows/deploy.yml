@@ -23,10 +23,12 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
-        run: npm install --include=dev    # ← changed this
+        run: npm install --include=dev # ← changed this
 
       - name: Build
         run: npm run build
+        env:
+          NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY: ${{ secrets.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY }}
 
       - uses: actions/configure-pages@v4
 

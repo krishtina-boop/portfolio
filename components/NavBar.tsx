@@ -19,6 +19,7 @@ const Navbar = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+  const basePath = process.env.NODE_ENV === "production" ? "/portfolio" : "";
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-black z-50 p-4">
@@ -47,8 +48,8 @@ const Navbar = () => {
               ))}
 
               <a
-                href="/icons/resume.pdf"
-                download="YourName_Resume.pdf"
+                href={`${basePath}/icons/resume.pdf`}
+                download="Krishtina_Resume.pdf"
                 className="bg-blue-400 text-white p-3 rounded-2xl"
               >
                 Download Resume
@@ -112,8 +113,8 @@ const Navbar = () => {
               </Link>
             ))}
             <a
-              href="/icons/resume.pdf"
-              download="YourName_Resume.pdf"
+              href={`${basePath}/icons/resume.pdf`}
+              download="Krishtina_Resume.pdf"
               className="bg-blue-400 text-white p-3 rounded-2xl mt-2"
             >
               Download Resume
