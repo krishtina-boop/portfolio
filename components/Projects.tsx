@@ -1,8 +1,10 @@
 import { Badge } from "./ui/badge";
 import { project } from "@/data/project";
 import Link from "next/link";
+import Image from "next/image";
 import { ScrollReveal } from "./scroll";
 export default function Projects() {
+  const basePath = process.env.NODE_ENV === "production" ? "/portfolio" : "";
   return (
     <>
       <ScrollReveal>
@@ -26,9 +28,12 @@ export default function Projects() {
                   {/* --- TOP PART: IMAGE --- */}
                   <div className="relative w-full h-48 sm:h-60 bg-gray-900/60 border-b border-gray-700/50 overflow-hidden flex items-center justify-center">
                     {/* Visual Placeholder */}
-                    <span className="text-gray-600 font-medium text-lg z-10 flex flex-col items-center gap-3">
-                      Project Image
-                    </span>
+                    <Image
+                      src={`${basePath}${project.image}`} // Assumes image name matches id (e.g., 1.jpg)
+                      alt={project.name}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
 
                     {/* <Image
                   src={`/projects/${project.id}.jpg`} // Assumes image name matches id (e.g., 1.jpg)

@@ -12,7 +12,7 @@ export const training = [
     name: "Python with AI",
     company: "Broadway Infosys",
     duration: "January 2026 - April 2026",
-    image: "/icons/python.jpeg",
+    image: "/icons/broadway.jpeg",
     description: ["Hands on experience with Python and AI"],
   },
 ];
